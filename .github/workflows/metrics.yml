@@ -16,6 +16,7 @@ jobs:
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Warsaw
+          repositories_affiliations: owner,  organization_member
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
           plugin_languages: yes
@@ -31,7 +32,6 @@ jobs:
           plugin_lines: yes
           plugin_notable: yes
           plugin_notable_from: all
-          plugin_notable_indepth: yes
           plugin_notable_types: commit
           plugin_activity_visibility: all
           filename: "profile0.svg"
