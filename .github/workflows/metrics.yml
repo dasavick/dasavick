@@ -16,9 +16,23 @@ jobs:
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Warsaw
-          repositories_affiliations: owner,  organization_member
+          plugin_discussions: yes
+          plugin_discussions_categories: yes
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
+          plugin_lines: yes
+          plugin_notable: yes
+          plugin_notable_from: organization
+          plugin_notable_repositories: yes
+          plugin_notable_types: commit
+          filename: "profile0a.svg"
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: OkaeriPoland
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Europe/Warsaw
           plugin_languages: yes
           plugin_languages_analysis_timeout: 15
           plugin_languages_categories: markup, programming
@@ -29,12 +43,7 @@ jobs:
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-          plugin_lines: yes
-          plugin_notable: yes
-          plugin_notable_from: all
-          plugin_notable_types: commit
-          plugin_activity_visibility: all
-          filename: "profile0.svg"
+          filename: "profile0b.svg"
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
